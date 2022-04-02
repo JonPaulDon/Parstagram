@@ -6,6 +6,10 @@
         <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/layout/activity_dashboard.xml" value="0.2640625" />
         <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/layout/activity_login.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/layout/activity_main.xml" value="0.22282608695652173" />
+        <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/layout/fragment_compose.xml" value="0.2640625" />
+        <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/layout/fragment_feed.xml" value="0.35733695652173914" />
+        <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/layout/item_post.xml" value="0.35733695652173914" />
+        <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/jonpa/AndroidStudioProjects/Parstagram/app/src/main/res/xml/fileprovider.xml" value="0.35733695652173914" />
       </map>
     </option>

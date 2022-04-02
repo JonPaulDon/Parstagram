@@ -76,7 +76,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToMainActivity(){
-        val intent= Intent(this@LoginActivity,DashboardActivity::class.java)
+        val intent= Intent(this@LoginActivity,MainActivity::class.java)
         startActivity(intent)
         finish()
     }
