@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.parstagram.MainActivity
 import com.example.parstagram.Post
 import com.example.parstagram.PostAdapter
@@ -22,7 +23,7 @@ import com.parse.ParseQuery
 open class FeedFragment : Fragment() {
     lateinit var postsRecyclerView: RecyclerView
     lateinit var adapter : PostAdapter
-
+    lateinit var swipeRefreshLayout : SwipeRefreshLayout
     var allPosts: MutableList<Post> = mutableListOf()
 
     override fun onCreateView(
@@ -37,7 +38,11 @@ open class FeedFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //This is where we set up our views
         postsRecyclerView=view.findViewById(R.id.postRecyclerView)
+        swipeRefreshLayout=view.findViewById<SwipeRefreshLayout?>(R.id.swipeContainer)
+            swipeRefreshLayout.setOnRefreshListener {
+            //queryPosts()
 
+        }
         //Recyclerview steps
         //Create layout for each row in list
 
@@ -53,10 +58,11 @@ open class FeedFragment : Fragment() {
     }
     open fun queryPosts(){
         val query: ParseQuery<Post> = ParseQuery.getQuery(Post::class.java)
+       // allPosts.clear()
         //Find all post objects
         query.include(Post.KEY_USER)
         query.addDescendingOrder("createdAt")
-
+        query.setLimit(20)
         //TODO Only return the most recent 20 posts
         query.findInBackground(object : FindCallback<Post> {
             override fun done(posts: MutableList<Post>?, e: ParseException?) {
